@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TripWise is a fast, responsive, one-screen AI travel planner for building trips in minutes."
+    />
+    <title>TripWise AI | One-screen travel planner</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main class="app-shell" aria-label="TripWise AI one-screen travel planner">
+      <header class="topbar">
+        <a class="brand" href="#planner" aria-label="TripWise AI home">TripWise<span>.</span></a>
+
+        <div class="controls" aria-label="Travel preferences">
+          <button class="pill-button" type="button" data-toggle="currency" aria-label="Currency set to Kenyan shilling">
+            KSh
+          </button>
+          <button class="pill-button flag" type="button" data-toggle="language" aria-label="Language set to English">
+            🇺🇸
+          </button>
+          <button class="pill-button" type="button" data-toggle="temperature" aria-label="Temperature unit set to Celsius">
+            °C
+          </button>
+          <button class="profile-button" type="button" aria-label="Open profile menu">
+            <span aria-hidden="true">♡</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="hero" id="planner">
+        <div class="hero-copy">
+          <p class="eyebrow">AI trip planner • live prices • one screen</p>
+          <h1>Your trip. Planned in minutes.</h1>
+          <p class="subhead">Ask once. Get a quick route, budget, weather hint, and next best booking move.</p>
+
+          <form class="planner-card" aria-label="Create a trip plan">
+            <label class="visually-hidden" for="tripPrompt">Tell TripWise what kind of trip you want</label>
+            <textarea
+              id="tripPrompt"
+              name="tripPrompt"
+              rows="3"
+              placeholder="Plan a beach escape from Nairobi under KSh 90k..."
+            ></textarea>
+            <div class="planner-actions">
+              <button class="icon-button" type="button" aria-label="Attach travel notes">📎</button>
+              <div class="send-actions">
+                <button class="icon-button" type="button" aria-label="Use voice input">🎙️</button>
+                <button class="send-button" type="submit" aria-label="Generate trip plan">➤</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="quick-prompts" aria-label="Quick trip ideas">
+            <button type="button" data-prompt="Create a five-day family trip to Mombasa with beach hotels and activities.">Create a new trip</button>
+            <button type="button" data-prompt="Inspire me with affordable warm destinations for next month.">Inspire me where to go</button>
+            <button type="button" data-prompt="Plan a scenic road trip with food stops, fuel estimates, and overnight stays.">Plan a road trip</button>
+            <button type="button" data-prompt="Plan a last-minute escape under budget with flights, stays, and weather.">Last-minute escape</button>
+          </div>
+
+          <aside class="plan-preview" aria-live="polite" aria-label="Generated trip preview">
+            <div>
+              <span class="preview-kicker">Preview</span>
+              <strong id="outputTitle">Ready when you are.</strong>
+              <p id="outputText">Type a trip idea or tap a prompt to generate a compact plan without leaving this screen.</p>
+            </div>
+            <ul class="mini-itinerary" id="miniItinerary">
+              <li><strong>1</strong><span>Idea</span></li>
+              <li><strong>2</strong><span>Budget</span></li>
+              <li><strong>3</strong><span>Book</span></li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="hero-art" aria-label="Tropical island travel inspiration" role="img">
+          <div class="clover-image"></div>
+          <div class="price-card card-top">
+            <span>Flight watch</span>
+            <strong>KSh 42,800</strong>
+            <small>NBO → ZNZ</small>
+          </div>
+          <div class="price-card card-bottom">
+            <span>Weather</span>
+            <strong>29°C</strong>
+            <small>Sunny beach days</small>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
