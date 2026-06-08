@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TripWise is a fast, responsive, one-page AI travel planner for building trips in minutes."
+    />
+    <title>TripWise AI | One-page travel planner</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main class="app-shell" aria-label="TripWise AI travel planner">
+      <header class="topbar">
+        <a class="brand" href="#hero" aria-label="TripWise AI home">TripWise<span>.</span></a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#planner">Planner</a>
+          <a href="#features">Help</a>
+          <a href="#deals">Deals</a>
+        </nav>
+
+        <div class="controls" aria-label="Travel preferences">
+          <button class="pill-button" type="button" data-toggle="currency" aria-label="Currency set to Kenyan shilling">
+            KSh
+          </button>
+          <button class="pill-button flag" type="button" data-toggle="language" aria-label="Language set to English">
+            🇺🇸
+          </button>
+          <button class="pill-button" type="button" data-toggle="temperature" aria-label="Temperature unit set to Celsius">
+            °C
+          </button>
+          <button class="profile-button" type="button" aria-label="Open profile menu">
+            <span aria-hidden="true">♡</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="hero" id="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">AI trip planner • live prices • one page</p>
+          <h1>Your trip. Planned in minutes.</h1>
+          <p class="subhead">Live prices, smart itineraries, local inspiration, and a human travel expert when you need one.</p>
+
+          <form class="planner-card" id="planner" aria-label="Create a trip plan">
+            <label class="visually-hidden" for="tripPrompt">Tell TripWise what kind of trip you want</label>
+            <textarea
+              id="tripPrompt"
+              name="tripPrompt"
+              rows="4"
+              placeholder="Ask for a weekend in Zanzibar, a road trip from Nairobi, or a last-minute beach escape..."
+            ></textarea>
+            <div class="planner-actions">
+              <button class="icon-button" type="button" aria-label="Attach travel notes">📎</button>
+              <div class="send-actions">
+                <button class="icon-button" type="button" aria-label="Use voice input">🎙️</button>
+                <button class="send-button" type="submit" aria-label="Generate trip plan">➤</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="quick-prompts" aria-label="Quick trip ideas">
+            <button type="button" data-prompt="Create a five-day family trip to Mombasa with beach hotels and activities.">Create a new trip</button>
+            <button type="button" data-prompt="Inspire me with affordable warm destinations for next month.">Inspire me where to go</button>
+            <button type="button" data-prompt="Plan a scenic road trip with food stops, fuel estimates, and overnight stays.">Plan a road trip</button>
+            <button type="button" data-prompt="Plan a last-minute escape under budget with flights, stays, and weather.">Plan a last-minute escape</button>
+          </div>
+
+          <a class="scroll-link" href="#features">See how I can help <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <div class="hero-art" aria-label="Tropical island travel inspiration" role="img">
+          <div class="clover-image"></div>
+          <div class="price-card card-top">
+            <span>Flight watch</span>
+            <strong>KSh 42,800</strong>
+            <small>NBO → ZNZ</small>
+          </div>
+          <div class="price-card card-bottom">
+            <span>Weather</span>
+            <strong>29°C</strong>
+            <small>Sunny beach days</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="features" aria-labelledby="features-title">
+        <div>
+          <p class="eyebrow">How TripWise helps</p>
+          <h2 id="features-title">Everything you need for a confident plan.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">🧭</span>
+            <h3>Personal itinerary</h3>
+            <p>Build day-by-day routes, meal ideas, activities, and downtime from one natural-language prompt.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">💸</span>
+            <h3>Budget first</h3>
+            <p>Compare travel styles, local costs, and deal alerts so your plan stays realistic from the start.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">🤝</span>
+            <h3>Human backup</h3>
+            <p>Escalate complex trips to a travel expert for visas, group logistics, accessibility, or special moments.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="trip-output" id="deals" aria-live="polite" aria-labelledby="output-title">
+        <div>
+          <p class="eyebrow">Generated preview</p>
+          <h2 id="output-title">Start with an idea.</h2>
+          <p id="outputText">Choose a quick prompt or type your dream trip to preview a polished plan instantly.</p>
+        </div>
+        <ul class="mini-itinerary" id="miniItinerary">
+          <li><strong>Day 1</strong><span>Arrive, check in, sunset dinner</span></li>
+          <li><strong>Day 2</strong><span>Local tour, beach time, market stop</span></li>
+          <li><strong>Day 3</strong><span>Adventure activity, flexible evening</span></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
